@@ -41,7 +41,12 @@ body {
 }
 @media (min-width: 922px) {
   .container {
-    width: 1000px;
+    width: 850px;
+  }
+}
+@media (max-width: 799px) and (min-width: 768px) {
+  .container {
+    width: 700px;
   }
 }
 h1,
@@ -137,6 +142,21 @@ img {
   }
   .header .nav .nav__list .link .link__list.open .close {
     display: block;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .header .nav .nav__list .link .link__list {
+    left: -500px;
+  }
+}
+@media (max-width: 799px) and (min-width: 768px) {
+  .header .nav .nav__list .link .link__list {
+    left: -411px;
+  }
+}
+@media (max-width: 767px) and (min-width: 376px) {
+  .header .nav .nav__list .link .link__list {
+    left: -389px;
   }
 }
 .header .nav .nav__list .link .link__list .close {
