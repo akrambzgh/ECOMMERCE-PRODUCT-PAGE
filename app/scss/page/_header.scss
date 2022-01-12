@@ -2,6 +2,10 @@
   position: relative;
   background-color: $white;
   @include flex(center, center, row);
+  z-index: 1;
+  @media (max-width: 991px) {
+    z-index: 2;
+  }
   .nav {
     border-bottom: 1px solid $grayishBlue;
     .nav__list {
@@ -92,6 +96,11 @@
               padding: 0 18px;
               color: $darkGrayishBlue;
               transition: 300ms;
+              @media (max-width: 991px) {
+                color: $veryDarkBlue;
+                font-weight: bold;
+                font-size: 20px;
+              }
             }
           }
         }
@@ -102,8 +111,9 @@
         .cart {
           cursor: pointer;
           position: relative;
+          z-index: 3;
           span.product-span {
-            display: none;
+            display: block;
             position: absolute;
             right: 10 / 2 * -1px;
             top: 10 / 2 * -1px;
@@ -114,7 +124,6 @@
             border-radius: 50%;
             text-align: center;
             font-size: 10px;
-            line-height: 15px;
           }
           &__box {
             opacity: 0;
