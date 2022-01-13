@@ -5,4 +5,7 @@
 @import "./utils/mixin";
 // PAGE
 @import "./page/header";
-@import "./page/content";
+@import "./page/content/hero";
+@import "./page/content/slider";
+@import "./page/content/info";
+@import "./page/content/lightbox";

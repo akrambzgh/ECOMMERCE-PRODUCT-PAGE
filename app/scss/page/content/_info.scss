@@ -1,0 +1,108 @@
+.detials {
+  .info {
+    h3 {
+      font-size: 25px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      font-weight: bold;
+      color: $orange;
+      line-height: 1.6;
+    }
+    h1 {
+      margin-bottom: 15px;
+      color: $veryDarkBlue;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.5;
+      color: $darkGrayishBlue;
+      font-weight: 500;
+    }
+  }
+  .price {
+    margin-top: 15px;
+    @include flex(space-between, center, row);
+    @include largeScreen() {
+      @include flex(center, flex-start, column);
+    }
+    .real-price {
+      @include flex(space-between, center, row);
+      h1 {
+        margin-bottom: 15px;
+        font-weight: bold;
+        color: $veryDarkBlue;
+      }
+      span{
+        border-radius: 7px;
+        background-color: lighten($color: $orange, $amount: 15);
+        color: white;
+        text-align: center;
+        line-height: 35px;
+        padding: 5px 15px;
+        display: block;
+        margin: 0 0 9px 20px;
+        font-size: 21px;
+        font-weight: bold;
+      }
+    }
+    .with-cobon{
+      h3{
+        font-size: 25px;
+        margin-bottom: 9px;
+        color: gray;
+        text-decoration: line-through;
+        opacity: 0.5;
+      }
+    }
+  }
+  .number {
+    margin-top: 15px;
+    @include flex(space-between, center, row);
+    background-color: $lightGrayishBlue;
+    padding: 15px 5px;
+    width: 100%;
+    border-radius: 7px;
+    @include largeScreen() {
+        width: 50%;
+    }
+    .minus,
+    .plus {
+      transition: 300ms;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    .the-num {
+      h3 {
+        font-size: 22px;
+      }
+    }
+  }
+  .add-button {
+    margin-top: 15px;
+    @include largeScreen() {
+      width: 50%;
+    }
+    button.add {
+      width: 100%;
+      padding: 15px 0;
+      background-color: orange;
+      border-radius: 7px;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: inherit;
+      transition: 300ms;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+@include largeScreen() {
+  .parent {
+    @include flex(space-between, center, row);
+    gap: 5px;
+  }
+}

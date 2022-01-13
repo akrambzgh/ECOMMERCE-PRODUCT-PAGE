@@ -113,7 +113,7 @@
           position: relative;
           z-index: 3;
           span.product-span {
-            display: block;
+            display: none;
             position: absolute;
             right: 10 / 2 * -1px;
             top: 10 / 2 * -1px;
@@ -145,7 +145,7 @@
             }
             @media (max-width: 991px) {
               & {
-                left: -1250%;
+                left: -1192%;
                 width: 380px;  
               }
             }

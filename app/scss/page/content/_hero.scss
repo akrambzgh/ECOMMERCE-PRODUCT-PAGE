@@ -1,0 +1,12 @@
+.hero {
+  padding: 15px;
+  @include largeScreen() {
+    @include flex(space-between, flex-start, row);
+    gap: 30px;
+    width: 910px;
+    margin: 50px auto;
+    border-radius: 30px;
+    background-color: $white;
+    z-index: 2;
+  }
+}

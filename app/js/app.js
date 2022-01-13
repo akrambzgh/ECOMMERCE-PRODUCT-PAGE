@@ -65,11 +65,11 @@ changeNumberBtns.forEach((changeBtn) => {
 
 // Append to the cart box
 const addButton = document.querySelector(".add")
+let cartNumber = document.querySelector(".cart .product-span")
 
 addButton.addEventListener("click", () => {
     if (parseInt(number.textContent) == 0) {
         alert("you can't do that")
-        cart.textContent = "";
     }
     const cartContent = `<div class="head">
     <h3>Cart</h3>
@@ -92,17 +92,18 @@ addButton.addEventListener("click", () => {
     <div class="check">
     <button class="check-bnt">Checkout</button>
     </div>`
-
     cartBox.innerHTML = cartContent
 
+    
     const deleteCartBox = document.querySelector(".delete")
     deleteCartBox.addEventListener("click", () => {
         cartBox.innerHTML = `<span class="empty">Your cart is empty</span>`
-        cart.textContent = ""
+        cartNumber.style.display = "none"
     })
-    const cartNumber = document.querySelector(".cart .product-span")
-    cartNumber.classList.add("show")
+    cartNumber.style.display = "block"
     cartNumber.textContent = parseInt(number.textContent)
+
+    number.textContent = 0
 })
 
 // Imgs Tabs
@@ -165,16 +166,17 @@ function displayLightBoxSlides(n) {
 }
 
 let lightBoxCotainer = document.querySelector(".lightbox")
-
 let slides = document.querySelectorAll(".show-slide")
-
+let overlayer = document.querySelector(".overlayer")
 slides.forEach((slide) => {
     slide.addEventListener("click", () => {
         lightBoxCotainer.classList.add("show")
+        overlayer.classList.add("open-lightbox")
     })
 })
 
 let cross = document.querySelector(".cross svg")
 cross.addEventListener("click", () => {
     lightBoxCotainer.classList.remove("show")
+    overlayer.classList.remove("open-lightbox")
 })
