@@ -85,7 +85,7 @@ addButton.addEventListener("click", () => {
     <span class="total">$${125 * parseInt(number.textContent)}.00</span>
     </div>
     <div class="delete">
-    <img src="/images/icon-delete.svg" alt="">
+    <img src="./images/icon-delete.svg" alt="">
     </div>
     </div>
     </div>
